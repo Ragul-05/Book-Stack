@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Stack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Book-Stack</h1>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        <!-- Book List Section -->
+        <section id="book-list">
+            <h2>My Book Collection</h2>
+
+            <div class="book-container" id="book-container">
+                <!-- Sample Book Card -->
+                <div class="book-card">
+                    <h3>Rich Dad Poor Dad</h3>
+                    <h5>by Robert Kiyosaki</h5>
+                    <p>This is a brief description of the book. Lorem ipsum dolor sit amet...</p>
+                    <button class="delete-btn" onclick="deleteBook(event)">Delete</button>
+                </div>
+                <!-- Additional book cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup Form for Adding Books -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup-box" id="popup-box">
+        <h2>Add New Book</h2>
+        <form id="add-book-form">
+            <input type="text" placeholder="Book Title" id="book-title-input" required>
+            <input type="text" placeholder="Book Author" id="book-author-input" required>
+            <textarea placeholder="Short Description" id="book-description-input" required></textarea>
+            <button type="submit" id="add-book-btn">Add Book</button>
+            <button type="button" id="cancel-popup-btn">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Floating Add Book Button -->
+    <button class="add-button" id="add-popup-button">+</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
